@@ -1,2 +1,2 @@
-# etch-a-sketch
+# Etch-a-Sketch
 Another JavaScript project from TOP
