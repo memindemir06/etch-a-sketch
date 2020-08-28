@@ -220,15 +220,15 @@ input[type="number"] {
 
   .removable,
   .grids {
-    width: 700px;
+    width: 1400px;
     height: 700px;
   }
   .hide-header-button {
     font-size: 2rem;
     width: 150px;
     height: 60px;
-    top: 30px;
-    right: 40px;
+    top: 10px;
+    right: 10px;
   }
 }
 

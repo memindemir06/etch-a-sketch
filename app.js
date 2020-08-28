@@ -68,11 +68,11 @@ function generate() {
   const gridSize = parseInt(input.value);
   //Generate grids
   if (
-    gridSize < 65 &&
+    gridSize < 129 &&
     gridSize > 3 &&
     gridsOuter.firstElementChild.innerHTML === ""
   ) {
-    for (let i = 0; i < gridSize * gridSize; i++) {
+    for (let i = 0; i < (gridSize * gridSize) / 2; i++) {
       const grid = document.createElement("div");
       grid.classList.add("grid");
       gridsOuter.firstElementChild.appendChild(grid);
