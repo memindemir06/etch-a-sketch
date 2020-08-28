@@ -10,6 +10,10 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,9 +29,7 @@
     </header>
     <div class="form colorful-background">
       <form>
-        <label for="input"
-          >Enter the grid square number between 4 and 128</label
-        >
+        <label for="input">Enter a number 4 to 64</label>
         <div class="input">
           <div class="btn trash" title="Delete">
             <i class="fas fa-trash"></i>
@@ -47,8 +49,16 @@
           <button class="btn generate" title="Generate grid" type="submit">
             <i class="fas fa-arrow-right"></i>
           </button>
+          <div class="btn trailing" title="Trail">
+            <p class="trail-option">D</p>
+          </div>
+          <input type="color" name="color" id="color" class="color" />
         </div>
       </form>
+    </div>
+    <div class="notify">
+      <h2 class="notification">Please generate the grid to start drawing.</h2>
+      <h2 class="mode hidden">Mode: Drawing</h2>
     </div>
     <div class="grids">
       <div class="removable"></div>

@@ -15,7 +15,7 @@ body {
   align-items: center;
   min-height: 100vh;
   color: white;
-
+  font-family: "Architects Daughter", cursive;
   background: rgb(131, 58, 180);
   background: -moz-linear-gradient(
     90deg,
@@ -53,7 +53,7 @@ form {
   padding: 0 1rem 1rem 1rem;
 }
 
-input {
+input[type="number"] {
   border: none;
   outline: none;
   padding: 0 5px;
@@ -61,7 +61,13 @@ input {
   width: 5rem;
 }
 
-i {
+input[type="color"] {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+i,
+p {
   pointer-events: none;
 }
 
@@ -76,8 +82,8 @@ i {
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 20px;
-  right: 40px;
+  top: 5px;
+  right: 5px;
   border-radius: 50%;
 }
 
@@ -112,8 +118,6 @@ i {
 }
 
 .generate {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
   border-left: 1px solid rgba(211, 211, 211, 0.5);
 }
 
@@ -124,10 +128,23 @@ i {
   justify-content: center;
 }
 
+.trailing {
+  border-left: 1px solid rgba(211, 211, 211, 0.5);
+}
+
+.trail-option {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mode {
+  text-align: center;
+}
+
 .grids {
   width: 300px;
   height: 300px;
   margin: 1rem;
+  margin-bottom: 10rem;
   box-shadow: 0 0 3rem rgba(0, 0, 0, 0.555);
   background: white;
 }
@@ -162,10 +179,9 @@ input[type="number"] {
 
 @keyframes arrow {
   from {
-    top: 20px;
   }
   to {
-    top: 30px;
+    transform: translateY(20px);
   }
 }
 
@@ -184,6 +200,12 @@ input[type="number"] {
   color: red;
 }
 
+.trailing:hover,
+.trailing:active {
+  background: black;
+  color: white;
+}
+
 .btn:focus {
   outline: none;
 }
@@ -192,20 +214,40 @@ input[type="number"] {
   html {
     font-size: 16px;
   }
-  input {
+  input[type="number"] {
     padding: 0 10px;
   }
 
   .removable,
   .grids {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
+  }
+  .hide-header-button {
+    font-size: 2rem;
+    width: 150px;
+    height: 60px;
+    top: 30px;
+    right: 40px;
   }
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-  input[type="number"] {
+  input[type="number"],
+  input[type="color"] {
     -webkit-appearance: none;
     -moz-appearance: none;
+  }
+  input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 60px;
+    height: inherit;
+  }
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
   }
 }
