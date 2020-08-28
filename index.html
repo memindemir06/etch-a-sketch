@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch 🖌</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hide-header-button">
+      <i class="fas fa-angle-double-up x"></i>
+    </div>
+    <div class="hide-header-button hidden">
+      <i class="fas fa-angle-double-down x"></i>
+    </div>
+
+    <header class="colorful-background">
+      <h1>Etch a Sketch 🖌</h1>
+    </header>
+    <div class="form colorful-background">
+      <form>
+        <label for="input"
+          >Enter the grid square number between 4 and 128</label
+        >
+        <div class="input">
+          <div class="btn trash" title="Delete">
+            <i class="fas fa-trash"></i>
+          </div>
+          <div class="btn undo" title="Refresh">
+            <i class="fas fa-undo"></i>
+          </div>
+          <input
+            type="number"
+            name="input"
+            id="input"
+            min="4"
+            max="256"
+            required
+            aria-required="true"
+          />
+          <button class="btn generate" title="Generate grid" type="submit">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="grids">
+      <div class="removable"></div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

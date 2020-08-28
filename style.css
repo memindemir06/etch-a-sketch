@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 8px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+
+  background: rgb(131, 58, 180);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+}
+
+header {
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+form {
+  padding: 0 1rem 1rem 1rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  font-size: 2rem;
+  width: 5rem;
+}
+
+i {
+  pointer-events: none;
+}
+
+.hide-header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 40px;
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.colorful-background {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  border: transparent;
+  background: white;
+  color: black;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.trash {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 1px solid rgba(211, 211, 211, 0.5);
+}
+
+.undo {
+  border-right: 1px solid rgba(211, 211, 211, 0.5);
+}
+
+.generate {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 1px solid rgba(211, 211, 211, 0.5);
+}
+
+.input {
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+}
+
+.grids {
+  width: 300px;
+  height: 300px;
+  margin: 1rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.555);
+  background: white;
+}
+
+.removable {
+  display: grid;
+  gap: 0 0;
+  width: 300px;
+  height: 300px;
+  border: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.x {
+  position: absolute;
+}
+
+.hide-header-button:hover .x {
+  animation: arrow 0.7s linear 0s infinite alternate;
+}
+
+@keyframes arrow {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+.undo:hover,
+.undo:active {
+  color: yellow;
+}
+
+.generate:hover,
+.generate:active {
+  color: lime;
+}
+
+.trash:hover,
+.trash:active {
+  color: red;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 650px) {
+  html {
+    font-size: 16px;
+  }
+  input {
+    padding: 0 10px;
+  }
+
+  .removable,
+  .grids {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
